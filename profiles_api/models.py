@@ -16,7 +16,6 @@ class UserProfileManager(BaseUserManager):
         email = self.normalize_email(email)
         # We create a ner user based on our custom manager
         user = self.model(email=email, name=name)
-
         # We use this method to ensure the password will be hashed/encrypted
         user.set_password(password)
         # We use this methos to ensure we will bring support to multiple databases in the future
@@ -33,7 +32,7 @@ class UserProfileManager(BaseUserManager):
 
         user.is_superuser = True # defined by PermissionMixin by default
         user.is_staff = True # defined by ourselves in our clase UserProfile
-        # We use this methos to ensure we will bring support to multiple databases in the future
+        # We use this method to ensure we will bring support to multiple databases in the future
         user.save(using=self._db)
         # We return the created user object
         return user
