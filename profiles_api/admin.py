@@ -2,5 +2,6 @@ from django.contrib import admin
 # Manually imported
 from profiles_api import models
 
-# Register UserProfile model in our admin panel
+# Register classes in models.py into our admin panel
 admin.site.register(models.UserProfile)
+admin.site.register(models.ProfileFeedItem)

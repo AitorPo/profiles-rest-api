@@ -5,12 +5,14 @@ from rest_framework.routers import DefaultRouter
 from profiles_api import views
 
 
+# Router is used to register ViewSets
 router = DefaultRouter()
 # We do not need '/' when we define our viewset's urls
 router.register('hello-viewset', views.HelloViewSet, base_name='hello-viewset')
 router.register('profile', views.UserProfileViewSet)
+router.register('feed', views.UserProfileFeedViewSet)
 
-
+# urlpatterns is used to register Views
 urlpatterns = [
     path('hello-view/', views.HelloApiView.as_view()),
     path('login/', views.UserLoginApiView.as_view()),
