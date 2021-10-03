@@ -76,7 +76,7 @@ class HelloViewSet(viewsets.ViewSet):
         """Return a hello message"""
 
         a_viewset = [
-            'Uses actions (list, create, retrieve, update, partial_update)',
+            'Uses actions (list, create, retrieve, update, partial_update and destroy)',
             'Automatically maps to URLs using Routers',
             'Provides more functionality with less code',
         ]
